@@ -1,0 +1,129 @@
+:root {
+    --primary-1: hsl(215, 52%, 70%);
+    --primary-2: hsl(178, 100%, 50%);
+
+    --neutral-1: hsl(217, 54%, 11%);
+    --neutral-2: hsl(216, 50%, 16%);
+    --neutral-3: hsl(215, 32%, 27%);
+    --neutral-4: hsl(0, 0%, 100%);
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--neutral-1);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.item {
+    background-color: var(--neutral-2);
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+}
+
+.item-image {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.item-title {
+    color: var(--neutral-4);
+    font-size: 1.3em;
+    transition: all .4s ease-in-out;
+}
+
+.item-desc {
+    color: var(--primary-1);
+}
+
+.inline-box {
+    display: flex;
+    justify-content: space-between;
+}
+.eth, .time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.eth {
+    color: var(--primary-2);
+}
+.eth-icon, .time-icon {
+    padding-right: 5px;
+}
+.time {
+    color: var(--primary-1);
+}
+
+.divider {
+    border: none;
+    background-color: var(--neutral-3);
+    height: 0.5px;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+}
+.author-image {
+    border-radius: 50%;
+    border: 1px solid var(--neutral-4);
+    height: 30px;
+    width: 30px;
+}
+.author-text {
+    color: var(--primary-1);
+    padding-left: 15px;
+}
+.name {
+    color: var(--neutral-4);
+    transition: all .4s ease-in-out;
+}
+
+.name:hover, .item-title:hover {
+    color: var(--primary-2);
+    transition: all .4s ease-in-out;
+    cursor:pointer;
+}
+
+.img-container {
+    position: relative;
+}
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: calc(100% - 5px);
+    border-radius: 10px;
+    background-color: rgba(0, 255, 247, 0);
+    
+    transition: all .4s ease-in-out;
+}
+.icon-container:hover {
+    background-color: rgba(0, 255, 247, 0.2);
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+.view-icon {
+    opacity: 0;
+    transition: all .4s ease-in-out;
+}
+.icon-container:hover > .view-icon {
+    opacity: 1;
+    transition: all .4s ease-in-out;
+}
